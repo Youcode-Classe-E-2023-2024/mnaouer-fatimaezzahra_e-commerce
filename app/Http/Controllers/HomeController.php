@@ -30,4 +30,28 @@ class HomeController extends Controller
         return redirect(route('home'));
     }
 
+    public function edit_Product(string $id){
+        $product = Product::find($id);
+//        dd($product->toArray());
+        return view('edit', ['product' => $product]);
+    }
+
+    public function update_Product(Request $request){
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'quantity' => 'required',
+        ]);
+
+//        dd($request->all());
+
+        $product = Product::find($request -> id);
+        $product->name =$request->name;
+        $product->description =$request->description;
+        $product->quantity =$request->quantity;
+        $product->update();
+
+        return redirect('/home');
+    }
+
 }
