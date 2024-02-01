@@ -36,10 +36,7 @@
                 </td>
                 <td>
                     <a href="{{ route('product.edit', $product->id) }}" class="btn btn-link btn-sm btn-rounded">Edit</a>
-                    <form action="" method="POST" class="d-inline">
-
-                        <button type="submit" class="btn btn-link btn-sm btn-rounded text-danger" onclick="return confirm('Are you sure you want to delete this product?')">Delete</button>
-                    </form>
+                    <a href="{{ route('product.delete', $product->id) }}" class="btn btn-link btn-sm btn-rounded text-danger">Delete</a>
                 </td>
             </tr>
         @endforeach

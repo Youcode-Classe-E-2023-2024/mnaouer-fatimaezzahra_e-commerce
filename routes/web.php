@@ -19,9 +19,11 @@ Route::get('/', function () {
 
 Route::get('home',[HomeController::class,'index'])->name('home');
 
-Route::get('ajoutProduct',[HomeController::class,'displayForm'])->name('product.form');
 Route::get('ajoutProduct',[HomeController::class,'create'])->name('product.create');
 Route::post('ajoutProduct',[HomeController::class,'store'])->name('product.store');
 
 Route::get('edit-Product/{id}',[HomeController::class,'edit_Product'])->name('product.edit');
 Route::put('update-Product',[HomeController::class,'update_Product'])->name('product.update');
+
+Route::get('delete-Product/{id}',[HomeController::class,'delete_Product'])->name('product.delete');
+

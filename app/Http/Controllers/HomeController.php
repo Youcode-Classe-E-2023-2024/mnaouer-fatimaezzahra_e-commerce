@@ -54,4 +54,9 @@ class HomeController extends Controller
         return redirect('/home');
     }
 
+    public function delete_Product(string $id){
+        $product = Product::find($id);
+        $product -> delete();
+        return redirect('/home');
+    }
 }
