@@ -35,6 +35,7 @@
                     <p class="fw-normal">{{ $product->quantity }}</p>
                 </td>
                 <td>
+                    <a href="{{ route('product.detail', $product->id) }}" class="btn btn-link btn-sm btn-rounded text-info">Details</a>
                     <a href="{{ route('product.edit', $product->id) }}" class="btn btn-link btn-sm btn-rounded">Edit</a>
                     <a href="{{ route('product.delete', $product->id) }}" class="btn btn-link btn-sm btn-rounded text-danger">Delete</a>
                 </td>

@@ -59,4 +59,10 @@ class HomeController extends Controller
         $product -> delete();
         return redirect('/home');
     }
+
+    public function detailProduct(string $id){
+        $product = Product::find($id);
+        return view('detailProduct', ['product' => $product]);
+dd($product);
+    }
 }

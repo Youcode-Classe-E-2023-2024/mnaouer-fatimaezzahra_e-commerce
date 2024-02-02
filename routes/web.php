@@ -27,3 +27,5 @@ Route::put('update-Product',[HomeController::class,'update_Product'])->name('pro
 
 Route::get('delete-Product/{id}',[HomeController::class,'delete_Product'])->name('product.delete');
 
+Route::get('detailProduct/{id}',[HomeController::class,'detailProduct'])->name('product.detail');
+
